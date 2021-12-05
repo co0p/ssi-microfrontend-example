@@ -21,14 +21,18 @@
 
 <nav>
     <ul>
-        <li><a href="page1.html">Page1</a></li>
-        <li><a href="page2.html">Page2</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/page1">Page1</a></li>
+        <li><a href="/page2">Page2</a></li>
     </ul>
 </nav>
 
 <main>
-    <!--# include file="page1.html" -->
-    <!--# include file="page2.html"-->
+    <!--#include file="$PAGE.html" -->
 </main>
+
+<footer>
+    nginx variable page: <!--#echo var="page" -->
+</footer>
 </body>
 </html>
