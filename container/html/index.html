@@ -22,17 +22,20 @@
 <nav>
     <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/page1">Page1</a></li>
+        <li><a href="/page1?demo=1">Page1</a></li>
         <li><a href="/page2">Page2</a></li>
     </ul>
 </nav>
 
 <main>
-    <!--#include file="$PAGE.html" -->
+
+    <!--#include virtual="$PAGE" -->
+
 </main>
 
 <footer>
-    nginx variable page: <!--#echo var="page" -->
+    nginx variable <em>local</em>: <!--#echo var="local" -->
+    nginx variable <em>page</em>: <!--#echo var="page" -->
 </footer>
 </body>
 </html>

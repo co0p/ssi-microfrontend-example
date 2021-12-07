@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+  container:
+    build: container
+    networks:
+      - ssi
+    ports:
+      - "8000:8000"
+    depends_on:
+      - welcome
+      - page1
+      - page2
+  welcome:
+    hostname: team_welcome
+    build: welcome
+    networks:
+      - ssi
+    ports:
+      - "8080:8080"
+  page1:
+    hostname: team_page1
+    build: page1
+    networks:
+      - ssi
+    ports:
+      - "8081:8081"
+  page2:
+    hostname: team_page2
+    build: page2
+    networks:
+      - ssi
+    ports:
+      - "8082:8082"
+networks:
+  ssi:
