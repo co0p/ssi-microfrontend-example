@@ -18,3 +18,10 @@ spa style
 ---------
 checkout tag [v2-spa](https://github.com/co0p/ssi-sveltekit-example/releases/tag/v2-spa), build the docker container and run it. Point your browser to http://localhost:8080 and you will see the two pages rendered in the container index.html. When
 you click a link, you will have a spa experience. SSI replaces the placeholder with the content of the respective html page.
+
+html microfrontends
+--------------------
+checkout tag [v3-html](https://github.com/co0p/ssi-sveltekit-example/releases/tag/v3-html), run `docker-compose build` to build the docker containers and run `docker-compose up` to start them. 
+Point your browser to http://localhost:8080 and you will see the container index.html. When
+you click a link, you will have a spa experience but this time html is served from other services. 
+SSI replaces the placeholder with the content of the respective html page with a proxy request under the hood.
