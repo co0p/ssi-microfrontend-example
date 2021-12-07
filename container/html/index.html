@@ -15,8 +15,14 @@
         padding: 1em;
         display: inline;
     }
-
 </style>
+
+<script>
+    document.addEventListener('REGISTERED', function (e) {
+        console.log('container received ', 'REGISTERED', e.detail);
+    }, false);
+
+</script>
 <body>
 
 <nav>
