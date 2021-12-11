@@ -1,7 +1,7 @@
 ssi-microfrontend-example
 =====================
 
-_Experiments on building a microfrontend using ssi and sveltekit_
+_Experiments on building a microfrontend using ssi_
 
 ```shell 
 docker build -t ssi-microfrontend-example .
