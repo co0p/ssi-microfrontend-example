@@ -35,12 +35,16 @@
 
 <main>
 
-    <!--#include virtual="$PAGE" -->
+    <!--#if expr="$PAGE" -->
+        <!--#include virtual="$PAGE" -->
+    <!--#else-->
+        <!-- no mapping set - fallback to welcome -->
+        <!--#include virtual="/404.html" -->
+    <!--#endif-->
 
 </main>
 
 <footer>
-    nginx variable <em>local</em>: <!--#echo var="local" -->
     nginx variable <em>page</em>: <!--#echo var="page" -->
 </footer>
 </body>
