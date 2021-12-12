@@ -29,8 +29,8 @@
 <nav>
     <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/page1?demo=1">Page1</a></li>
-        <li><a href="/page2">Page2</a></li>
+        <li><a href="/page1/?demo=1">Page1</a></li>
+        <li><a href="/page2/">Page2</a></li>
     </ul>
 </nav>
 
@@ -43,7 +43,12 @@
 </main>
 
 <footer>
-    nginx variable <em>page</em>: <!--#echo var="page" -->
+    <hr>
+    nginx include <em>page</em>: <!--#echo var="page" --> / location: <em id="footer-location"></em>
+
 </footer>
+
+<script>document.getElementById('footer-location').innerText = JSON.stringify(window.location.href);
+</script>
 </body>
 </html>

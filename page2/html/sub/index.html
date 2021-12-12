@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<body>
+<h1>Sub page of page2</h1>
+
+<p>My current location is: <span id="location"></span></p>
+
+<script>
+    document.getElementById('location').innerText = JSON.stringify(window.location.href);
+    document.dispatchEvent(new CustomEvent('REGISTERED', {detail: {name: 'PAGE2/SUB'}}))
+</script>
+
+</body>
+</html>

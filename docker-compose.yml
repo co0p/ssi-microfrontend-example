@@ -11,21 +11,21 @@ services:
       - page1
       - page2
   welcome:
-    hostname: team_welcome
+    hostname: team_welcome_hostname
     build: welcome
     networks:
       - ssi
     ports:
       - "8080:8080"
   page1:
-    hostname: team_page1
+    hostname: team_page1_hostname
     build: page1
     networks:
       - ssi
     ports:
       - "8081:8081"
   page2:
-    hostname: team_page2
+    hostname: team_page2_hostname
     build: page2
     networks:
       - ssi
